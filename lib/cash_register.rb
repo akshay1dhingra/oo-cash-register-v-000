@@ -11,8 +11,8 @@ class CashRegister
 
   def add_item(title, price, quantity=1)
     #binding.pry
-    self.total = self.total + price * quantity 
-    quantity.times {self.items << title} 
+    self.total += price * quantity
+    quantity.times {self.items << title}
   end
 
   def apply_discount
@@ -25,7 +25,8 @@ class CashRegister
   end
 
   def void_last_transaction
-    self.total = self.total - self.last_transaction
+    binding.pry
+    self.total -= self.last_transaction
   end
 
 
