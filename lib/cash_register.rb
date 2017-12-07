@@ -11,7 +11,7 @@ class CashRegister
 
   def add_item(title, price, quantity=1)
     #binding.pry
-    (self.total = self.total + price * quantity) == self.last_transaction
+    self.total = self.total + price * quantity
     quantity.times {self.items << title}
   end
 
