@@ -25,10 +25,10 @@ class CashRegister
     end
   end
 
-  def void_last_transaction(quantity=1)
+  def void_last_transaction # (quantity=1) if we wanted to test if we got rid of the last item from the @items array
     #binding.pry
     self.total -= self.last_transaction
-    quantity.items.pop
+    #quantity.times { self.items.pop } this code might pop that out
   end
 
 
